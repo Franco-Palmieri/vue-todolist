@@ -7,12 +7,16 @@ const app = new Vue(
             "Fare la spesa",
             "Fare il bucato"
             ],
-            newTodoList: [],
+            newTodoList: "",
         },
         methods:{
             addNewList: function() {
-                
-            }
+                this.todoList.push(this.newTodoList);
+                this.newTodoList = "";
+            },
+            deleteNewList: function (index){
+                this.todoList.splice(index, 1);
+            },
         },
     }
 );

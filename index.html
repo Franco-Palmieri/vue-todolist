@@ -13,13 +13,13 @@
 </head>
 <body>
     <div id="app">
-        <input type="text" placeholder="Inserisci cose da fare">
-        <button>Aggiungi</button>
-        
+        <input v-model="newTodoList" @keyup.enter="addNewList" type="text" placeholder="Inserisci cose da fare">
+        <button @click="addNewList">Aggiungi</button>
+
         <ul v-for="(text, index) in todoList">
             <li>
                 <span>{{text}}</span>
-                <i class="far fa-times-circle"></i>
+                <i class="far fa-times-circle" @click="deleteNewList"></i>
             </li>
         </ul>
     </div>
