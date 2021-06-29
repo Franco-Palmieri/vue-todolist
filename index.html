@@ -34,7 +34,7 @@
                     <ul v-for="(text, index) in todoList" class="row section-list p-0">
                         <li class="col-12 d-flex justify-content-between element-list">
                             <span>{{text}}</span>
-                            <i class="far fa-times-circle" @click="deleteNewList"></i>
+                            <i class="far fa-times-circle" @click="deleteNewList(index)"></i>
                         </li>
                     </ul>
                 </div>
