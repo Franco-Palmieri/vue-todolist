@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(140, 223, 17);
+}
+.contenitore{
+    background-color: white;
+    margin-top: 100px;
+}
+.logo img{
+    width: 100%;
+}
+.section{
+    text-align: center;
+}

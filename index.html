@@ -13,15 +13,30 @@
 </head>
 <body>
     <div id="app">
-        <input v-model="newTodoList" @keyup.enter="addNewList" type="text" placeholder="Inserisci cose da fare">
-        <button @click="addNewList">Aggiungi</button>
-
-        <ul v-for="(text, index) in todoList">
-            <li>
-                <span>{{text}}</span>
-                <i class="far fa-times-circle" @click="deleteNewList"></i>
-            </li>
-        </ul>
+        <div class="container contenitore">
+            <div class="row justify-content-center section">
+                <div class="logo col-5">
+                    <img src="./img/logo.png" alt="">
+                </div>
+            </div>
+            <div class="row justify-content-center section">
+                <div class="col-12">
+                    <input v-model="newTodoList" @keyup.enter="addNewList" type="text" placeholder="Inserisci cose da fare">
+                    <button @click="addNewList">Aggiungi</button>
+                </div>
+            </div>
+            <div class="row justify-content-center section">
+                <div class="">
+                    <ul v-for="(text, index) in todoList" class="section-list">
+                        <li>
+                            <span>{{text}}</span>
+                            <i class="far fa-times-circle" @click="deleteNewList"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>        
+        
     </div>
     <script src="script.js"></script>
 </body>
