@@ -20,15 +20,19 @@
                 </div>
             </div>
             <div class="row justify-content-center section">
-                <div class="col-12">
-                    <input v-model="newTodoList" @keyup.enter="addNewList" type="text" placeholder="Inserisci cose da fare">
-                    <button @click="addNewList">Aggiungi</button>
+                <div class="col-12 d-flex justify-content-center ">
+                    <div class="row">
+                        <div class="col-12">
+                            <input v-model="newTodoList" @keyup.enter="addNewList" type="text" placeholder="Inserisci cose da fare">
+                            <button @click="addNewList">Aggiungi</button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row justify-content-center section">
-                <div class="">
-                    <ul v-for="(text, index) in todoList" class="section-list">
-                        <li>
+                <div class="col-8 lista">
+                    <ul v-for="(text, index) in todoList" class="row section-list p-0">
+                        <li class="col-12 d-flex justify-content-between element-list">
                             <span>{{text}}</span>
                             <i class="far fa-times-circle" @click="deleteNewList"></i>
                         </li>
